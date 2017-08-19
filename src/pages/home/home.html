@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+      概率论与数理统计
+    </ion-title>
+    <ion-buttons start>
+      <button *ngIf="page>1" ion-button icon-only  (click)="back()">
+        <ion-icon name="ios-arrow-round-back-outline"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-buttons end>
+      <button ion-button icon-only  (click)="next()">
+        <ion-icon name="ios-arrow-round-forward-outline"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <pdf-viewer [src]="pdfSrc"
+              [page]="page"
+              [zoom]="zoom"
+              [original-size]="true"
+              style="display: block;"
+  ></pdf-viewer>
+</ion-content>
